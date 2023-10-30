@@ -47,7 +47,8 @@ const Navbar = () => {
           to={"/"}
           className="flex items-center w-56 p-1 rounded-lg text-neutral-100 md:w-28"
         >
-          <img src={logoColor} alt="Logo" className="w-full h-full" />
+          {/* <img src={logoColor} alt="Logo" className="w-full h-full" /> */}
+          <h1>Logo</h1>
         </Link>
 
         <CourseInCartModal

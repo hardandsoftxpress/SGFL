@@ -8,7 +8,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    toast.success("Message envoyé avec successe !");
+    toast.success("Cette fonctionnalité n'est pas encore disponible.");
   };
 
   return (
