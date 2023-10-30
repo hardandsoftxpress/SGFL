@@ -1,9 +1,15 @@
 import { useState } from "react";
 import contactImage from "@/assets/images/contact.png";
+import { toast } from "react-toastify";
 
 const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [emptyInput, setEmptyInput] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    toast.success("Message envoyé avec successe !");
+  };
 
   return (
     <section id="contact" className="min-h-screen py-12 md:py-24 bg-base-200">
@@ -26,7 +32,7 @@ const ContactSection = () => {
               spécifiques ? N'hésitez pas à nous contacter. Notre équipe sera
               ravie de vous répondre dans les plus brefs délais.
             </p>
-            <form className="text-left">
+            <form className="text-left" onSubmit={handleSubmit}>
               <div className="mb-8">
                 <label htmlFor="name" className="font-medium text-md">
                   Nom complet
